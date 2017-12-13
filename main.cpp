@@ -26,6 +26,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <cstdlib>
 #include "epd2in9b.h"
 #include "imagedata.h"
 #include "epdpaint.h"
@@ -61,16 +62,19 @@ int main(void)
     /*Write strings to the buffer */
     paint_black.SetRotate(ROTATE_90);
     paint_red.SetRotate(ROTATE_90);
-    //x1,y1,x2,y2
+    //main rectangle
     paint_black.DrawRectangle(1, 1, 295, 127, COLORED);
     //x,y
     paint_red.DrawStringAt(1, 1, "SALE 50% OFF!!!", &Font24, COLORED);
     paint_black.DrawStringAt( 68, 107, "ISAAX!!!", &Font20, COLORED);
-
+    int shifter = 0;
+    //bar code rectangle
     paint_black.DrawRectangle(44, 25, 188, 106, COLORED);
+
     for( int a = 49; a < 186; a = a + 5 ){
-        int shifter = a % 2 == 0 ? 4 : 2;
+        shifter = rand() % 1 + 3;
         paint_black.DrawFilledRectangle(a, 27, a + shifter, 95, COLORED);
+//        paint_black.DrawCharAt();
     }
 
 
