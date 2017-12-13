@@ -60,13 +60,20 @@ int main(void)
 //    paint_red.drawfilledcircle(90, 210, 30, colored);
     /*Write strings to the buffer */
     paint_black.SetRotate(ROTATE_90);
+    paint_red.SetRotate(ROTATE_90);
     //x1,y1,x2,y2
     paint_black.DrawRectangle(1, 1, 295, 127, COLORED);
     //x,y
-    paint_black.DrawStringAt(68, 107, "ISAAX!!!", &Font20, COLORED);
-    paint_red.SetRotate(ROTATE_90);
     paint_red.DrawStringAt(1, 1, "SALE 50% OFF!!!", &Font24, COLORED);
-   
+    paint_black.DrawStringAt( 68, 107, "ISAAX!!!", &Font20, COLORED);
+
+    paint_black.DrawRectangle(44, 25, 188, 106, COLORED);
+    for( int a = 49; a < 186; a = a + 5 ){
+        int shifter = a % 2 == 0 ? 4 : 2;
+        paint_black.DrawFilledRectangle(a, 27, a + shifter, 95, COLORED);
+    }
+
+
     /* Display the frame_buffer */
     epd.DisplayFrame(frame_black, frame_red);
 
