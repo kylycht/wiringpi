@@ -49,15 +49,15 @@ int main(void)
     paint_red.Clear(UNCOLORED);
     /* Draw something to the frame buffer */
     /* For simplicity, the arguments are explicit numerical coordinates */
-#    paint_black.setrotate(rotate_0);
-#    paint_red.setrotate(rotate_0);
-#    paint_black.drawrectangle(10, 80, 50, 140, colored);
-#    paint_black.drawline(10, 80, 50, 140, colored);
-#    paint_black.drawline(50, 80, 10, 140, colored);
-#    paint_black.drawcircle(90, 110, 30, colored);
-#    paint_red.drawfilledrectangle(10, 180, 50, 240, colored);
-#    paint_red.drawfilledrectangle(0, 6, 128, 26, colored);
-#    paint_red.drawfilledcircle(90, 210, 30, colored);
+//    paint_black.setrotate(rotate_0);
+//    paint_red.setrotate(rotate_0);
+//    paint_black.drawrectangle(10, 80, 50, 140, colored);
+//    paint_black.drawline(10, 80, 50, 140, colored);
+//    paint_black.drawline(50, 80, 10, 140, colored);
+//    paint_black.drawcircle(90, 110, 30, colored);
+//    paint_red.drawfilledrectangle(10, 180, 50, 240, colored);
+//    paint_red.drawfilledrectangle(0, 6, 128, 26, colored);
+//    paint_red.drawfilledcircle(90, 210, 30, colored);
     /*Write strings to the buffer */
     paint_black.DrawStringAt(4, 30, "e-Paper Demo", &Font12, COLORED);
     paint_red.DrawStringAt(6, 10, "Hello world!", &Font12, UNCOLORED);
