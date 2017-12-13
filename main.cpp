@@ -71,7 +71,9 @@ int main(void)
     /* Display the image buffer */
     epd.DisplayFrame(IMAGE_BLACK, IMAGE_RED);
     printf("sleeping\n");
+    
     epd.Sleep();
+    printf("done sleeping");
     return 0;
 }
 
