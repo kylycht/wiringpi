@@ -40,7 +40,7 @@ int main(void)
         printf("e-Paper init failed\n");
         return -1;
     }
-
+    printf("starting\n");
     unsigned char* frame_black = (unsigned char*)malloc(epd.width * epd.height / 8);
     unsigned char* frame_red = (unsigned char*)malloc(epd.width * epd.height / 8);
 
@@ -48,7 +48,7 @@ int main(void)
     Paint paint_red(frame_red, epd.width, epd.height);
     paint_black.Clear(UNCOLORED);
     paint_red.Clear(UNCOLORED);
-
+    printf("after clear\n");
     /* Draw something to the frame buffer */
     /* For simplicity, the arguments are explicit numerical coordinates */
     paint_black.SetRotate(ROTATE_0);
@@ -60,7 +60,7 @@ int main(void)
     paint_red.DrawFilledRectangle(10, 180, 50, 240, COLORED);
     paint_red.DrawFilledRectangle(0, 6, 128, 26, COLORED);
     paint_red.DrawFilledCircle(90, 210, 30, COLORED);
-
+    printf("before write\n");
     /*Write strings to the buffer */
     paint_black.DrawStringAt(4, 30, "e-Paper Demo", &Font12, COLORED);
     paint_red.DrawStringAt(6, 10, "Hello world!", &Font12, UNCOLORED);
@@ -70,7 +70,7 @@ int main(void)
 
     /* Display the image buffer */
     epd.DisplayFrame(IMAGE_BLACK, IMAGE_RED);
-
+    printf("sleeping\n");
     epd.Sleep();
     return 0;
 }
