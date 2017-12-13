@@ -59,7 +59,9 @@ int main(void)
 //    paint_red.drawfilledrectangle(0, 6, 128, 26, colored);
 //    paint_red.drawfilledcircle(90, 210, 30, colored);
     /*Write strings to the buffer */
+    paint_black.SetRotate(0);
     paint_black.DrawStringAt(4, 30, "e-Paper Demo", &Font12, COLORED);
+    paint_red.SetRotate(ROTATE_180);
     paint_red.DrawStringAt(6, 10, "Hello world!", &Font12, UNCOLORED);
    
     /* Display the frame_buffer */
