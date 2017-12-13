@@ -60,6 +60,7 @@ int main(void)
 //    paint_red.drawfilledcircle(90, 210, 30, colored);
     /*Write strings to the buffer */
     paint_black.SetRotate(ROTATE_90);
+    paint_black.DrawRectangle(1, 1, 127, 295);
     paint_black.DrawStringAt(4, 30, "e-Paper Demo", &Font24, COLORED);
     paint_red.SetRotate(ROTATE_90);
     paint_red.DrawStringAt(6, 10, "Hello world!", &Font24, COLORED);
