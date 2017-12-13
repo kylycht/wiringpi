@@ -59,16 +59,14 @@ int main(void)
 //    paint_red.drawfilledrectangle(0, 6, 128, 26, colored);
 //    paint_red.drawfilledcircle(90, 210, 30, colored);
     /*Write strings to the buffer */
-    paint_black.SetRotate(0);
+    paint_black.SetRotate(ROTATE_90);
     paint_black.DrawStringAt(4, 30, "e-Paper Demo", &Font24, COLORED);
-    paint_red.SetRotate(ROTATE_180);
+    paint_red.SetRotate(ROTATE_90);
     paint_red.DrawStringAt(6, 10, "Hello world!", &Font24, COLORED);
    
     /* Display the frame_buffer */
     epd.DisplayFrame(frame_black, frame_red);
 
-    /* Display the image buffer */
-    //epd.DisplayFrame(IMAGE_BLACK, IMAGE_RED);
     
     epd.Sleep();
 
