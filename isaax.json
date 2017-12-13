@@ -1,0 +1,13 @@
+{
+  "name": "eink-app",
+  "version": "",
+  "description": "eink",
+  "main": "main.cpp",
+  "author": "auth",
+  "license": "",
+  "language":"c",
+  "scripts": {
+     "start": "ebd"
+    },
+   "dependency": null
+}
