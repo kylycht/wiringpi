@@ -60,10 +60,12 @@ int main(void)
 //    paint_red.drawfilledcircle(90, 210, 30, colored);
     /*Write strings to the buffer */
     paint_black.SetRotate(ROTATE_90);
+    //x1,y1,x2,y2
     paint_black.DrawRectangle(1, 1, 295, 127, COLORED);
-    paint_black.DrawStringAt(4, 30, "e-Paper Demo", &Font24, COLORED);
+    //x,y
+    paint_black.DrawStringAt(68, 107, "ISAAX!!!", &Font20, COLORED);
     paint_red.SetRotate(ROTATE_90);
-    paint_red.DrawStringAt(1, 1, "ISAAX!", &Font24, COLORED);
+    paint_red.DrawStringAt(1, 1, "SALE 50% OFF!!!", &Font24, COLORED);
    
     /* Display the frame_buffer */
     epd.DisplayFrame(frame_black, frame_red);
